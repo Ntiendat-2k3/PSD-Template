@@ -1,0 +1,13 @@
+@mixin size($width, $height: $width) {
+     width: $width;
+     height: $height;
+}
+
+@mixin absoluteCenter($direction) {
+     position: absolute;
+     @if $direction == "left" {
+          left: 50%;
+          transform: translateY(-50%);
+     }
+     top: 50%;
+}
