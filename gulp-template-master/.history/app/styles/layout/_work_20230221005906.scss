@@ -1,0 +1,43 @@
+.work
+{
+     padding-top: 10rem;
+     &-list{
+          @include flexbox();
+          height: 78rem;
+     }
+     &-column{
+          width: 25%
+     }
+     &-content{
+          color: white;
+          text-align: center;
+          padding: 1rem;
+     }
+     &-icon{
+          font-size: 3rem;
+          margin-bottom: 1.5rem;
+     }
+     &-title{
+          text-transform: uppercase;
+          margin-bottom: 1.5rem;
+          line-height: 1.6;
+          @include textClamp()
+     }
+     &-image{
+          width: 100%;  
+          height: 100%;
+          object-fit: cover;
+     }
+     &-item{
+          height: 50%;
+     }
+     &-item--full{
+          height: 100%;   // = 2&-item
+     }
+     @include maxWidth(1600px){
+          &-list{
+               height: 69rem;
+          }
+     }
+}
+@include hoverEffect(".work-item", ".work-content", "false");

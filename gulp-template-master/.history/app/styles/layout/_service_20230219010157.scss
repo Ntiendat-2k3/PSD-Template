@@ -1,0 +1,14 @@
+.service
+{
+     padding: 11rem 0 12rem;
+     background-color: white;
+     &-list{
+          @include flexbox();
+     }
+     &-item{
+          width: 33.33%;
+     }
+     &-item-icon{
+          
+     }
+}

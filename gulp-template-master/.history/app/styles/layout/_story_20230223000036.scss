@@ -1,0 +1,11 @@
+.story
+{
+     padding: 10rem 0;
+     background-color: white;
+     &-list{
+          @include flexbox(stretch, space-between);
+     }
+     &-item{
+          width: calc(33.33% - 2rem); // khoảng trống 30px x 2 = 60 / 3item = 20px
+     }
+}

@@ -1,0 +1,8 @@
+.work
+{
+     padding-top: 10rem;
+     &-list{
+          @include fle
+     }
+}
+@include hoverEffect(".work-item", ".work-content", "false");

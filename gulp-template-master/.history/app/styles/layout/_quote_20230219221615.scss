@@ -1,0 +1,83 @@
+.quote
+{
+     padding: 6.5rem 0;
+     background-color: $gray-color;
+     &-container{
+          @include flexbox(center, space-between);
+     }
+     &-arrow{
+          color: $gray-dark-color;
+          cursor: pointer;
+          font-size: 3rem;
+          padding: 1rem 2rem;
+     }
+     &-content{
+          padding-left: 5.5rem;
+          padding-right: 5.5rem;
+          @include flexbox(center);
+     }
+     &-icon{
+          @include size(16rem);
+          @include flexbox(center, center);
+          border: 3px solid $third-color;
+          flex-shrink: 0;
+          img{
+               width:  90%;
+               height: 100%;
+               object-fit: cover;
+          }
+     }
+     &-info{
+          padding-left: 6rem;
+     }
+     &-desc{
+          font-size: 2.5rem;
+          line-height: 1.6;
+          font-weight: 300;
+          font-family: $second-font;
+          margin-bottom: 2.5rem;
+          font-style: italic;
+          color: $text-color;
+          @include textClamp(3);
+     }
+     &-author{
+          font-family: $third-font;
+          font-size: 2.4rem;
+          position: relative;
+          padding-left: 7rem;
+          &::before{
+               content: "";
+               @include absoluteCenter("top");
+               @include size(6rem, .4rem);
+               background-color: $primary-color;
+               left: 0;
+          }
+     }
+     @include maxWidth(767px){
+          &-arrow{
+               display: none;
+          }
+          &-content{
+               padding: 0;
+               flex-direction: column;
+          }
+          &-icon{
+               @include size(10rem);
+               img{
+                    max-width: 50%;
+               }
+          }
+          &-info{
+               padding-left: 0;
+               padding-top: 3rem;
+          }
+          &-desc{
+               display: block;
+               font-size: 1.6rem;
+               text-align: center;
+          }
+          &-author{
+               font-size: 2rem;
+          }
+     }
+}

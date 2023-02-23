@@ -1,0 +1,53 @@
+.team
+{
+     background-color: #fff;
+     padding: 10rem  0;
+     &-list{
+          @include flexbox(stretch, space-between);
+     }
+     &-item{
+          width: calc(33.33% - 20px);  // mỗi khoảng trống 30px ; 3item -> 2 khoảng trống ==> 60px / 3item = 20px
+     }
+     &-image{
+          @include size(100%, 47rem);
+          object-fit: cover;
+     }
+     &-info{
+          padding: 3rem 1.5rem;
+          text-align: center;
+
+          height: calc(100% - 47rem);   //chiều cao item - chiều cao ảnh,  để nội dung cái nào dài hơn vẫn cao bằng nhau 
+          @include flexbox(flex-start, space-between, column);
+     }
+     &-name{
+          text-transform: uppercase;
+          margin-bottom: 1.5rem;
+          font-weight: 500;
+          line-height: 1.4;
+     }
+     &-position{
+          font-size: 1.5rem;
+          font-weight: 300;
+          font-style: italic;
+          color: $text-color;
+     }
+     &-social{
+          @include flexbox(center, center);
+          &-item:not(:first-child){
+               border-left: 1px solid $primary-color;
+          }
+          &-link{
+               @include flexbox(center, center);
+               @include size(6rem);
+               color: $primary-color;
+               font-size: 2.5rem;
+               background-color: $second-color;
+               transition: .2s linear;
+               &:hover{
+                    color: #fff;
+                    background-color: $primary-color;
+               }
+          }
+     }
+}
+@include hoverEffect(".team-main", ".team-content");

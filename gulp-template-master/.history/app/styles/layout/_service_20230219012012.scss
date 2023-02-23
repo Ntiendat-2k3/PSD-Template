@@ -1,0 +1,39 @@
+.service
+{
+     padding: 11rem 0 12rem;
+     background-color: white;
+     &-list{
+          @include flexbox();
+          margin-left: -4rem;
+          margin-top: 6.5rem;
+          &:first-of-type{
+               border-bottom: 1px solid $dra;  // line
+               padding-bottom: 5rem;  // cach tren
+               margin-bottom: 5rem;   // cach duoi
+          }
+     }
+     &-item{
+          width: calc(33.33% - 4rem);
+          margin-left: 4rem;
+          @include flexbox(flex-start);
+     }
+     &-item-icon{
+          font-size: 3.5rem;
+          color: $third-color;
+          margin: 0 3rem;
+     }
+     &-item-title{
+          color: $title-color;
+          margin-bottom: 1.5rem;
+          text-transform: uppercase;
+     }
+     &-item-desc{
+          color: $text-color;
+          line-height: 1.6;
+          font-weight: 300;
+          font-family: $second-font;
+     }
+     &-item-info{
+          width: calc(100% - 9.5rem);
+     }
+}

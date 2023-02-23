@@ -1,0 +1,13 @@
+.device
+{
+     padding-top: 11rem;
+     background: linear-gradient(to bottom, rgba(rgb(209, 93, 93), .5), rgba(white, .4)) ,
+     url("https://images.unsplash.com/photo-1472214103451-9374bd1c798e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8bmF0dXJlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60") no-repeat center / cover;
+     &-media{
+          text-align: center;
+     }
+     &-image{
+          margin: 0 auto -9.3rem;
+          display: inline-block;   // thì không 
+     }
+}

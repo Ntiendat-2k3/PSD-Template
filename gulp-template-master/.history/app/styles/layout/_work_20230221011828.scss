@@ -1,0 +1,68 @@
+.work
+{
+     padding-top: 10rem;
+     &-list{
+          @include flexbox();
+          height: 78rem;
+     }
+     &-column{
+          width: 25%
+     }
+     &-content{
+          color: white;
+          text-align: center;
+          padding: 1.5rem;
+     }
+     &-icon{
+          font-size: 3rem;
+          margin-bottom: 1rem;
+     }
+     &-title{
+          text-transform: uppercase;
+          margin-bottom: 1rem;
+          line-height: 1.6;
+          @include textClamp(1);
+     }
+     &-image{
+          width: 100%;  
+          height: 100%;
+          object-fit: cover;
+     }
+     &-item{
+          height: 50%;
+     }
+     &-item--full{
+          height: 100%;   // = 2&-item
+     }
+     @include maxWidth(1600px){
+          &-list{
+               height: 69rem;
+          }
+     }
+     @include maxWidth(1279px){
+          &-list{
+               flex-wrap: wrap;
+               overflow: hidden;
+               height: auto;
+          }
+          &-column{
+               width: 50%;
+          }
+          &-item{
+               height: 42rem;
+          }
+          &-item--full{
+               height: 84rem
+          }
+     }
+     @include maxWidth(767px){
+          &-column{
+               width: 100%;
+          }
+          &-item,
+          &-item--full{
+               height: auto;
+          }
+     }
+}
+@include hoverEffect(".work-item", ".work-content", "false");

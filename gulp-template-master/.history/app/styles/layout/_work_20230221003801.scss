@@ -1,0 +1,15 @@
+.work
+{
+     padding-top: 10rem;
+     &-list{
+          @include flexbox();
+     }
+     &-column{
+          width: 25%
+     }
+     &-content{
+          color: white;
+          text-align: center;
+     }
+}
+@include hoverEffect(".work-item", ".work-content", "false");
